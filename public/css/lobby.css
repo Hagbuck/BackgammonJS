@@ -1,0 +1,32 @@
+#lobby{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.lobby_box {
+    border: 1px solid white;
+    display: block;
+    padding: 1em;
+    margin: auto;
+    margin-bottom: 1em;
+    width: 40%;
+}
+
+#manage_user {
+    
+}
+
+#manage_game {
+
+}
+
+button {
+    width: 100%;
+}
+
+#game_id_input, #join_button{
+    width : 49%;
+    vertical-align: top;
+    display: inline-block;
+}

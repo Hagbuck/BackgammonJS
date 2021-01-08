@@ -1,0 +1,107 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #222222;
+}
+
+body div {
+    background-color: #222222;
+}
+
+#board {
+    border: 1px solid black;
+    display: block;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#game {
+    text-align: center;
+}
+
+#board {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rand_span {
+    min-height: 20px;
+    width: 20px;
+    display: inline-block;
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+    margin: 10px;
+}
+
+.unplayable {
+    border: 1px solid red;
+}
+
+.pannel {
+    text-align: center;
+    border: 1px solid white;
+    padding: 4px;
+    max-width: 250px;
+}
+
+.pannel_box{
+    display: block;
+    min-height: 70px;
+}
+
+.pannel p, .message, #game_info label {
+    color: white;
+}
+
+#logo_box{
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#player1_logo, #player2_logo {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    border-radius: 100%;
+}
+#p1, #p2{
+    color: white;
+}
+
+#p1, #p2, #player1_logo, #player2_logo{
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+#error, #error_lobby {
+    color: red;
+}
+
+#error_lobby, #game_info p {
+    display: inline;
+}
+
+#game_info {
+    padding: 10px;
+    text-align: center;
+}
+
+/*#leave_button, #rand_button, */#skip_button {
+    width: 100px;
+    text-align: center;
+}
+
+.small-square-button-img {
+    width: 64px;
+    height: 64px;
+}
+
+.small-square-button-img:hover {
+}

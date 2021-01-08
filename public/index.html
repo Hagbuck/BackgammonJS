@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lobby.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Backgammon</title>
+    <script
+			  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+              crossorigin="anonymous"></script>
+    <script src="/js/socket.io.min.js"></script>
+    <script type="module" src="js/txrx.js"></script>
+    <script type="module" src="js/name-generator.js"></script>
+    <script type="module" src="js/backgammon-client.js"></script>
+</head>
+<body>
+    <div id="lobby" class="text-light">
+        <h1 class="display-1">Backgammon</h1><br />
+        <div id="manage_user" class="lobby_box">
+            <div class="form-group">
+                <h3>User</h3>
+                <input id="name" type="text" class="form-control" value=""/>
+            </div>
+            <button id="rand_name" class="btn btn-light">Random name</button>
+        </div>
+        <div id="manage_game" class="lobby_box">
+            <h3>Custom Game</h3>
+            <div class="form-group">
+                <button id="create_button" class="btn btn-light">Create Game</button>
+            </div>
+            <div class="form-group">
+                <input id="game_id_input" type="text" placeholder="Game id" class="form-control"/>    
+                <button id="join_button" class="btn btn-light">Join Game</button>
+            </div>
+            <h3>VS Computer</h3>
+            <div class="form-group">
+                <button id="computer_game" class="btn btn-light" disabled>Play</button>
+                <small class="form-text text-muted">Comming soon !</small>
+            </div>
+        </div>
+    </div>
+    <div id="game_info" style="/*display: none;*/">
+        <div class="form-group container">
+            <div class="item">
+           <!--  <button id="leave_button" class="btn btn-light btn-sm">Leave Game</button> -->
+                <p class="message">Your game id is :<span id="game_id"></span></p>
+            </div>
+                <!-- <input type="checkbox" id="sounds" name="sounds" checked/>
+                <label for="sounds">Enable sounds</label> -->
+            <div class="item">
+                <img id="rand_button" src="img/throw_dices.png" class="small-square-button-img" />
+    <!--             <button id="rand_button" class="btn btn-light btn-sm">Throw dices</button> -->
+                <button id="skip_button" class="btn btn-light btn-sm">Skip</button>
+            </div>
+            <div class="item">
+                <span id="sounds">
+                    <img id="sound_on" src="img/sound_on.png" class="small-square-button-img" />
+                    <img id="sound_off" src="img/sound_off.png" class="small-square-button-img" />
+                </span>
+                <img id="leave_button" src="img/leave.png" class="small-square-button-img" />
+            </div>
+        </div>
+    </div>
+    <div><p id="error_lobby"></p></div>
+    <div id="game" class="">
+        
+        <div id="player2_box"><div id="player2_logo"></div><p id="p2"></p></div>
+        <canvas id="board"></canvas>
+        <div id="player1_box"><div id="player1_logo"></div><p id="p1"></p></div>
+
+        <div class="pannel" style="display: none;">
+            <div id="logo_box">
+                <div id="player1_logo"></div><p id="p1"></p><br />
+                <div id="player2_logo"></div><p id="p2"></p>
+            </div>
+            <br />
+            <hr />
+            <div class="pannel_box">
+                <!-- <button id="rand_button">Throw dices</button>
+                <button id="skip_button">Skip</button><br />-->
+                <div id="rand_box">
+                </div>
+            </div>
+            <hr />
+            <p id="error"></p>
+            <p id="message"></p>
+        </div>
+    </div>
+</body>
+</html>
