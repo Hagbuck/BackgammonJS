@@ -101,7 +101,10 @@ body div {
 .small-square-button-img {
     width: 64px;
     height: 64px;
+    transition: all .2s ease-in-out;
 }
 
 .small-square-button-img:hover {
+    transform: scale(1.1);
 }
+

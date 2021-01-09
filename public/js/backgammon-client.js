@@ -203,16 +203,17 @@ $(document).ready(() => {
         if($("#sounds").prop("checked")) audio.set_enable(true);
         else audio.set_enable(false);
     });*/
-    $("#sounds_off").hide();
+    $("#sound_off").hide();
     $("#sounds").click(() => {
-        if($("#sounds_on").is(":visible")){
-            $("sounds_on").hide();
-            $("sounds_off").show();
+        if($("#sound_on").is(":visible")){
+            $("#sound_on").hide();
+            $("#sound_off").show();
             audio.set_enable(false);
         } else {
-            $("sounds_on").show();
-            $("sounds_off").hide();
+            $("#sound_on").show();
+            $("#sound_off").hide();
             audio.set_enable(true);
+            audio.click();
         }
     });
     $("#rand_button").click(() => {
